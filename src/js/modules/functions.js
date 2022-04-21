@@ -21,10 +21,10 @@ export function menuInit() {
 	iconMenu.addEventListener('click', () => {
 		iconMenu.classList.toggle('_active')
 		menuBody.classList.toggle('_active')
-		if( document.documentElement.classList.contains('catalog-open')) {
+		if (document.documentElement.classList.contains('catalog-open')) {
 			document.documentElement.classList.remove('catalog-open')
 		}
-		if( document.documentElement.classList.contains('sub-menu-open')) {
+		if (document.documentElement.classList.contains('sub-menu-open')) {
 			document.documentElement.classList.remove('sub-menu-open')
 		}
 	})
@@ -32,7 +32,7 @@ export function menuInit() {
 
 export function isSwiper() {
 	let sliders = document.querySelectorAll('._swiper');
-		if (sliders) {
+	if (sliders) {
 		for (let index = 0; index < sliders.length; index++) {
 			let slider = sliders[index];
 			if (!slider.classList.contains('swiper-bild')) {
@@ -62,11 +62,11 @@ export function isSwiper() {
 			}
 		}
 		sliders_bild_callback();
-		}
+	}
 
-		function sliders_bild_callback(params) { }
-		let sliderScrollItems = document.querySelectorAll('._swiper_scroll');
-		if (sliderScrollItems.length > 0) {
+	function sliders_bild_callback(params) {}
+	let sliderScrollItems = document.querySelectorAll('._swiper_scroll');
+	if (sliderScrollItems.length > 0) {
 		for (let index = 0; index < sliderScrollItems.length; index++) {
 			const sliderScrollItem = sliderScrollItems[index];
 			const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
@@ -87,8 +87,8 @@ export function isSwiper() {
 			});
 			sliderScroll.scrollbar.updateSize();
 		}
-		}
-		let slider_about = new Swiper('.bromo-slider__body', {
+	}
+	let slider_about = new Swiper('.bromo-slider__body', {
 		/*
 		effect: 'fade',
 		autoplay: {
@@ -156,13 +156,13 @@ export function isSwiper() {
 		//scrollbar: {
 		//	el: '.swiper-scrollbar',
 		//},
-		});
+	});
 
 }
 
 export function isSpoller() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
-		if (spollersArray.length > 0) {
+	if (spollersArray.length > 0) {
 		// Получение обычных слойлеров
 		const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
 			return !item.dataset.spollers.split(",")[0];
@@ -250,6 +250,7 @@ export function isSpoller() {
 				});
 			}
 		}
+
 		function setSpollerAction(e) {
 			const el = e.target;
 			if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
@@ -266,6 +267,7 @@ export function isSpoller() {
 				e.preventDefault();
 			}
 		}
+
 		function hideSpollersBody(spollersBlock) {
 			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
 			if (spollerActiveTitle) {
@@ -273,8 +275,8 @@ export function isSpoller() {
 				_slideUp(spollerActiveTitle.nextElementSibling, 500);
 			}
 		}
-		}
-		let _slideUp = (target, duration = 500) => {
+	}
+	let _slideUp = (target, duration = 500) => {
 		if (!target.classList.contains('_slide')) {
 			target.classList.add('_slide');
 			target.style.transitionProperty = 'height, margin, padding';
@@ -300,8 +302,8 @@ export function isSpoller() {
 				target.classList.remove('_slide');
 			}, duration);
 		}
-		}
-		let _slideDown = (target, duration = 500) => {
+	}
+	let _slideDown = (target, duration = 500) => {
 		if (!target.classList.contains('_slide')) {
 			target.classList.add('_slide');
 			if (target.hidden) {
@@ -330,24 +332,24 @@ export function isSpoller() {
 				target.classList.remove('_slide');
 			}, duration);
 		}
-		}
-		let _slideToggle = (target, duration = 500) => {
+	}
+	let _slideToggle = (target, duration = 500) => {
 		if (target.hidden) {
 			return _slideDown(target, duration);
 		} else {
 			return _slideUp(target, duration);
 		}
-		}
+	}
 }
 
 export function isDinamicAdaptive() {
-			// Dynamic Adapt v.1
-		// HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
-		// e.x. data-da=".item,992,2"
-		// Andrikanych Yevhen 2020
-		// https://www.youtube.com/c/freelancerlifestyle
+	// Dynamic Adapt v.1
+	// HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
+	// e.x. data-da=".item,992,2"
+	// Andrikanych Yevhen 2020
+	// https://www.youtube.com/c/freelancerlifestyle
 
-		"use strict";
+	"use strict";
 
 	function DynamicAdapt(type) {
 		this.type = type;
@@ -502,4 +504,48 @@ export function isDinamicAdaptive() {
 
 	const da = new DynamicAdapt("max");
 	da.init();
+}
+
+export function animScroll() {
+	const animItems = document.querySelectorAll('._anim-items')
+
+	if (animItems.length > 0) {
+		window.addEventListener('scroll', animOnScroll)
+
+		function animOnScroll(params) {
+			for (let index = 0; index < animItems.length; index++) {
+				const animItem = animItems[index];
+				const animItemHeight = animItem.offsetHeight;
+				const animItemsOffset = offset(animItem).top;
+				const animStart = 4;
+
+				let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+				if (animItemHeight > window.innerHeight) {
+					animItemPoint = window.innerHeight - window.innerHeight / animStart;
+				}
+
+				if ((scrollY > animItemsOffset - animItemPoint) && scrollY < (animItemsOffset + animItemHeight)) {
+					animItem.classList.add('_active')
+				} else {
+					if (!animItem.classList.contains('_anim-no-hide')) {
+						animItem.classList.remove('_active')
+					}
+				}
+			}
+		}
+
+		function offset(el) {
+			var rect = el.getBoundingClientRect(),
+				scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+				scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			return {
+				top: rect.top + scrollTop,
+				left: rect.left + scrollLeft
+			}
+		}
+		setTimeout(() => {
+			animOnScroll();
+		}, 300);
+	}
 }

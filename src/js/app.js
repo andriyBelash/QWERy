@@ -10,9 +10,10 @@ flsFunctions.isSpoller();
 
 flsFunctions.isDinamicAdaptive();
 
-import './files/tippy.js'
+flsFunctions.animScroll();
 
-tippy('[data-tippy-content]')
+
+
 // let userIcon = document.querySelector('.user-header__icon')
 
 // userIcon.addEventListener('click', () => {

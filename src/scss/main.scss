@@ -41,6 +41,14 @@ position: relative;
     // .main-block__decor
 
     &__decor {
+        transform: translate(0px, 120%);
+        opacity: 0;
+        transition: all .5s ease;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
     }
 
     // .main-block__title
@@ -53,6 +61,14 @@ position: relative;
         line-height: 104%;
         text-transform: capitalize;
         color: #FFFFFF;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        transition: all .5s ease;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
         @media (max-width: 768px) {
             text-align: center;
         }
@@ -76,6 +92,13 @@ position: relative;
         line-height: 25 / 18 * 100%;
         color: #FFFFFF;
         transition: all 0.5s ease;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
         @media (any-hover: hover) {
             &:hover {
                 transition: all 0.5s ease;
@@ -87,6 +110,14 @@ position: relative;
     // .main-block__follow
 
     &__follow {
+        transition: all 0.5s ease;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
     }
 
     // .main-block__image-bg
@@ -103,7 +134,14 @@ position: relative;
 .decor {
     display: flex;
     align-items: center;
-    
+    transition: all 0.5s ease;
+    transform: translate(0px, 120%);
+    opacity: 0;
+    &._active{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all .5s ease;
+    }
 
     @include adaptiv-value("gap", 32, 10, 1);
     // .decor__text
@@ -119,6 +157,7 @@ position: relative;
         letter-spacing: 6px;
         text-transform: uppercase;
         color: #FFC178;
+        
         @include adaptiv-value("letter-spacing", 6, 1, 1);
         @include adaptiv-value("font-size", 18, 14, 1);
     }
@@ -247,17 +286,41 @@ position: relative;
     &__title {
         max-width: 555px;
         margin-bottom: 27px;
+        transition: all 0.5s ease;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
     }
 
     // .east-tanggara__text
 
     &__text {
         margin-bottom: 27px;
+        transition: all 0.5s ease;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
     }
 
     // .east-tanggara__link
 
     &__link {
+        transition: all 0.5s ease;
+        transform: translate(0px, 120%);
+        opacity: 0;
+        &._active{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: all .5s ease;
+        }
         @media (max-width: 991px) {
             justify-content: center;
         }

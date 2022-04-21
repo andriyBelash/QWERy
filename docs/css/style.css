@@ -372,6 +372,26 @@ h6 {
   margin: 0 auto;
 }
 
+.main-block__decor {
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-block__decor._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .main-block__title {
   font-style: normal;
   font-weight: 700;
@@ -380,8 +400,25 @@ h6 {
   line-height: 104%;
   text-transform: capitalize;
   color: #FFFFFF;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   margin-top: 32px;
   margin-bottom: 125px;
+}
+
+.main-block__title._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .main-block__title span {
@@ -407,6 +444,40 @@ h6 {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+.main-block__scroll._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.main-block__follow {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+.main-block__follow._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .main-block__image-bg {
@@ -424,7 +495,24 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
   gap: 32px;
+}
+
+.decor._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .decor__text {
@@ -528,10 +616,64 @@ h6 {
 .east-tanggara__title {
   max-width: 555px;
   margin-bottom: 27px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+.east-tanggara__title._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .east-tanggara__text {
   margin-bottom: 27px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+.east-tanggara__text._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.east-tanggara__link {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+}
+
+.east-tanggara__link._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .bromo-slider__content {
